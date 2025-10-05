@@ -1,0 +1,341 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* cr_import_vendor_bills
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-01 19:45+0000\n"
+"PO-Revision-Date: 2023-07-01 19:45+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: cr_import_vendor_bills
+#: code:addons/cr_import_vendor_bills/wizard/cr_multiple_invoice_validation_wz.py:55
+#, python-format
+msgid "<div class='alert alert-danger' role='alert'> Some invoices were removed from the list, because they cannot be validated (%s) </div>"
+msgstr "<div class='alert alert-danger' role='alert'> Algunas facturas se eliminaron de la lista, porque no se pueden validar (%s) </div>"
+
+#. module: cr_import_vendor_bills
+#: selection:cr.multiple.invoice.validation,state_invoice_partner:0
+msgid "Accepted"
+msgstr "Aceptado"
+
+#. module: cr_import_vendor_bills
+#: model:ir.model.fields,field_description:cr_import_vendor_bills.field_cr_multiple_invoice_validation__alert_warning
+msgid "Alert_warning"
+msgstr "Alerta de precaución"
+
+#. module: cr_import_vendor_bills
+#: model:ir.model.fields,field_description:cr_import_vendor_bills.field_cr_multiple_invoice_validation__import_bill_account_analytic_id
+#: model:ir.model.fields,field_description:cr_import_vendor_bills.field_res_company__import_bill_account_analytic_id
+msgid "Analytic Account"
+msgstr "Cuenta analítica"
+
+#. module: cr_import_vendor_bills
+#: model:ir.model.fields,help:cr_import_vendor_bills.field_cr_multiple_invoice_validation__import_bill_account_id
+#: model:ir.model.fields,help:cr_import_vendor_bills.field_res_company__import_bill_account_id
+#: model:ir.model.fields,help:cr_import_vendor_bills.field_res_partner__import_bill_account_id
+#: model:ir.model.fields,help:cr_import_vendor_bills.field_res_users__import_bill_account_id
+msgid "Assign a spending account to each line"
+msgstr "Asignar una cuenta de gastos a cada línea"
+
+#. module: cr_import_vendor_bills
+#: model:ir.model.fields,help:cr_import_vendor_bills.field_cr_multiple_invoice_validation__import_bill_account_analytic_id
+#: model:ir.model.fields,help:cr_import_vendor_bills.field_res_company__import_bill_account_analytic_id
+msgid "Assign an analytical account to each line"
+msgstr "Asignar una cuenta analítica a cada línea."
+
+#. module: cr_import_vendor_bills
+#: model_terms:ir.ui.view,arch_db:cr_import_vendor_bills.cr_multiple_invoice_validation_view_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: cr_import_vendor_bills
+#: selection:account.invoice,iva_condition:0
+#: selection:cr.multiple.invoice.validation,iva_condition:0
+msgid "Capital assets"
+msgstr "Activos fijos"
+
+#. module: cr_import_vendor_bills
+#: model:ir.actions.server,name:cr_import_vendor_bills.cron_load__invoice_other_charge_ir_actions_server
+#: model:ir.cron,cron_name:cr_import_vendor_bills.cron_load__invoice_other_charge
+#: model:ir.cron,name:cr_import_vendor_bills.cron_load__invoice_other_charge
+msgid "Cargar Facturas(xml) Otros Cargos"
+msgstr ""
+
+#. module: cr_import_vendor_bills
+#: model:ir.model,name:cr_import_vendor_bills.model_res_company
+msgid "Companies"
+msgstr "Compañías"
+
+#. module: cr_import_vendor_bills
+#: model:ir.model,name:cr_import_vendor_bills.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: cr_import_vendor_bills
+#: model:ir.model.fields,field_description:cr_import_vendor_bills.field_cr_multiple_invoice_validation__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: cr_import_vendor_bills
+#: model:ir.model.fields,field_description:cr_import_vendor_bills.field_cr_multiple_invoice_validation__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: cr_import_vendor_bills
+#: selection:account.invoice,iva_condition:0
+#: selection:cr.multiple.invoice.validation,iva_condition:0
+msgid "Current spending does not generate credit"
+msgstr "El gasto corriente no genera crédito"
+
+#. module: cr_import_vendor_bills
+#: model:ir.model.fields,field_description:cr_import_vendor_bills.field_cr_multiple_invoice_validation__state_invoice_partner
+msgid "Customer response"
+msgstr "Respuesta del cliente"
+
+#. module: cr_import_vendor_bills
+#: model:ir.model.fields,field_description:cr_import_vendor_bills.field_account_invoice__company_activity_id
+#: model:ir.model.fields,field_description:cr_import_vendor_bills.field_cr_multiple_invoice_validation__company_activity_id
+msgid "Default economic activity"
+msgstr "Actividad económica compañia"
+
+#. module: cr_import_vendor_bills
+#: model:ir.model.fields,field_description:cr_import_vendor_bills.field_account_invoice__from_mail
+msgid "Desde email"
+msgstr ""
+
+#. module: cr_import_vendor_bills
+#: model:ir.model.fields,field_description:cr_import_vendor_bills.field_cr_multiple_invoice_validation__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: cr_import_vendor_bills
+#: model:ir.model.fields,field_description:cr_import_vendor_bills.field_cr_multiple_invoice_validation__import_bill_account_id
+#: model:ir.model.fields,field_description:cr_import_vendor_bills.field_res_company__import_bill_account_id
+msgid "Expense Account"
+msgstr "Cuenta de gasto"
+
+#. module: cr_import_vendor_bills
+#: model:ir.model.fields,field_description:cr_import_vendor_bills.field_res_company__import_bill_folder_import
+msgid "Folder to import"
+msgstr "Carpeta de correo"
+
+#. module: cr_import_vendor_bills
+#: selection:account.invoice,iva_condition:0
+#: selection:cr.multiple.invoice.validation,iva_condition:0
+msgid "Generate IVA credit"
+msgstr "Genera crédito IVA"
+
+#. module: cr_import_vendor_bills
+#: selection:account.invoice,iva_condition:0
+#: selection:cr.multiple.invoice.validation,iva_condition:0
+msgid "Generates partial IVA credit"
+msgstr "Genera crédito parcial del IVA"
+
+#. module: cr_import_vendor_bills
+#: model:ir.model.fields,field_description:cr_import_vendor_bills.field_cr_multiple_invoice_validation__id
+msgid "ID"
+msgstr ""
+
+#. module: cr_import_vendor_bills
+#: model:ir.model.fields,field_description:cr_import_vendor_bills.field_account_invoice__iva_condition
+#: model:ir.model.fields,field_description:cr_import_vendor_bills.field_cr_multiple_invoice_validation__iva_condition
+msgid "IVA Condition"
+msgstr "Condición de IVA"
+
+#. module: cr_import_vendor_bills
+#: model:ir.model.fields,help:cr_import_vendor_bills.field_account_invoice__has_ack
+msgid "If flagged, indicates you have the answer (ACK) attached "
+msgstr "Si está marcado, indica que tiene la respuesta (ACK) adjunta "
+
+#. module: cr_import_vendor_bills
+#: model:ir.model.fields,help:cr_import_vendor_bills.field_account_invoice__from_mail
+msgid "If flagged, some fields of the invoice they will be read only "
+msgstr "Si está marcado, algunos campos de la factura serán de solo lectura "
+
+#. module: cr_import_vendor_bills
+#: model:ir.model.fields,field_description:cr_import_vendor_bills.field_res_partner__import_bill_account_id
+#: model:ir.model.fields,field_description:cr_import_vendor_bills.field_res_users__import_bill_account_id
+msgid "Import Expense Account"
+msgstr "Cuenta de gasto"
+
+#. module: cr_import_vendor_bills
+#: model:ir.model.fields,field_description:cr_import_vendor_bills.field_res_company__import_bill_automatic
+msgid "Import Vendor Bills"
+msgstr "Importar facturas de proveedores"
+
+#. module: cr_import_vendor_bills
+#: model:ir.model,name:cr_import_vendor_bills.model_fetchmail_server
+msgid "Incoming Mail Server"
+msgstr "Servidor de correo entrante"
+
+#. module: cr_import_vendor_bills
+#: model:ir.model,name:cr_import_vendor_bills.model_account_invoice
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: cr_import_vendor_bills
+#: model_terms:ir.ui.view,arch_db:cr_import_vendor_bills.view_company_form_import_inherit
+msgid "Invoice Import"
+msgstr "Importación de facturas"
+
+#. module: cr_import_vendor_bills
+#: model:ir.model,name:cr_import_vendor_bills.model_account_invoice_line
+msgid "Invoice Line"
+msgstr "Línea factura"
+
+#. module: cr_import_vendor_bills
+#: model:ir.model.fields,field_description:cr_import_vendor_bills.field_cr_multiple_invoice_validation__invoice_ids
+msgid "Invoices"
+msgstr "Facturas"
+
+#. module: cr_import_vendor_bills
+#: model_terms:ir.ui.view,arch_db:cr_import_vendor_bills.cr_multiple_invoice_validation_view_form
+msgid "Invoices to Validate"
+msgstr "Facturas a validar"
+
+#. module: cr_import_vendor_bills
+#: model:ir.model.fields,field_description:cr_import_vendor_bills.field_res_company__import_bill_journal_id
+msgid "Journal"
+msgstr "Diario"
+
+#. module: cr_import_vendor_bills
+#: model:ir.model.fields,field_description:cr_import_vendor_bills.field_cr_multiple_invoice_validation____last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: cr_import_vendor_bills
+#: model:ir.model.fields,field_description:cr_import_vendor_bills.field_cr_multiple_invoice_validation__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: cr_import_vendor_bills
+#: model:ir.model.fields,field_description:cr_import_vendor_bills.field_cr_multiple_invoice_validation__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: cr_import_vendor_bills
+#: model:ir.model.fields,field_description:cr_import_vendor_bills.field_res_company__import_bill_mail_server_id
+msgid "Mail Server"
+msgstr "Servidor de correo"
+
+#. module: cr_import_vendor_bills
+#: model:ir.model,name:cr_import_vendor_bills.model_cr_multiple_invoice_validation
+#: model_terms:ir.ui.view,arch_db:cr_import_vendor_bills.cr_multiple_invoice_validation_view_form
+msgid "Multiple invoice validation Wz"
+msgstr "Validación de facturas múltiples Wz"
+
+#. module: cr_import_vendor_bills
+#: selection:cr.multiple.invoice.validation,state_invoice_partner:0
+msgid "Partial acceptance"
+msgstr "Aceptación Parcial"
+
+#. module: cr_import_vendor_bills
+#: model:ir.model.fields,field_description:cr_import_vendor_bills.field_res_company__import_bill_product_id
+msgid "Product"
+msgstr "Producto"
+
+#. module: cr_import_vendor_bills
+#: selection:account.invoice,iva_condition:0
+#: selection:cr.multiple.invoice.validation,iva_condition:0
+msgid "Proportionality"
+msgstr "Proporcionalidad"
+
+#. module: cr_import_vendor_bills
+#: model:ir.model.fields,field_description:cr_import_vendor_bills.field_account_invoice_line__quantity
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: cr_import_vendor_bills
+#: model:ir.actions.server,name:cr_import_vendor_bills.cron_load_xml_invoice_tax_lines_ir_actions_server
+#: model:ir.cron,cron_name:cr_import_vendor_bills.cron_load_xml_invoice_tax_lines
+#: model:ir.cron,name:cr_import_vendor_bills.cron_load_xml_invoice_tax_lines
+msgid "Recálculo de Facturas(xml)"
+msgstr ""
+
+#. module: cr_import_vendor_bills
+#: selection:cr.multiple.invoice.validation,state_invoice_partner:0
+msgid "Rejected"
+msgstr "Rechazado"
+
+#. module: cr_import_vendor_bills
+#: model:ir.model.fields,help:cr_import_vendor_bills.field_res_company__import_bill_mail_server_id
+msgid "Select the Incoming Mail Server"
+msgstr "Seleccione el servidor de correo entrante"
+
+#. module: cr_import_vendor_bills
+#: model:ir.model.fields,help:cr_import_vendor_bills.field_res_company__import_bill_automatic
+msgid "Select to upload vendor bills from incoming email"
+msgstr "Seleccione para cargar facturas de proveedor desde el correo electrónico entrante"
+
+#. module: cr_import_vendor_bills
+#: model:ir.model.fields,help:cr_import_vendor_bills.field_res_company__import_bill_product_id
+msgid "Set a product to each line"
+msgstr "Establecer un producto para cada línea"
+
+#. module: cr_import_vendor_bills
+#: model:ir.model.fields,help:cr_import_vendor_bills.field_res_company__import_bill_folder_import
+msgid "Source folder where the emails to be imported will be found"
+msgstr "Carpeta de origen donde están los correos con las facturas electrónicas a importar"
+
+#. module: cr_import_vendor_bills
+#: model:ir.model,name:cr_import_vendor_bills.model_account_tax
+msgid "Tax"
+msgstr "Impuesto"
+
+#. module: cr_import_vendor_bills
+#: code:addons/cr_import_vendor_bills/models/api_import_mail.py:43
+#, python-format
+msgid "This XML does not comply with the necessary structure to be processed. Error: %s"
+msgstr "Este XML no cumple con la estructura necesaria para ser procesado. Error:% s"
+
+#. module: cr_import_vendor_bills
+#: code:addons/cr_import_vendor_bills/models/api_import_mail.py:39
+#, python-format
+msgid "This is a Electronic Ticket only a Electronic Bill are valid for taxes"
+msgstr "Este es un tiquete electrónico, solo la factura electrónica es válida para impuestos"
+
+#. module: cr_import_vendor_bills
+#: model:ir.model.fields,field_description:cr_import_vendor_bills.field_account_invoice__has_ack
+msgid "Tiene ACK?"
+msgstr "¿Tiene ACK?"
+
+#. module: cr_import_vendor_bills
+#: model:ir.model.fields,field_description:cr_import_vendor_bills.field_account_invoice_line__price_unit
+msgid "Unit Price"
+msgstr "Precio unitario"
+
+#. module: cr_import_vendor_bills
+#: model_terms:ir.ui.view,arch_db:cr_import_vendor_bills.cr_multiple_invoice_validation_view_form
+msgid "Validate All"
+msgstr "Validar todo"
+
+#. module: cr_import_vendor_bills
+#: model:ir.actions.act_window,name:cr_import_vendor_bills.cr_multiple_invoice_validation_act
+msgid "Validate Invoices"
+msgstr "Validar Facturas"
+
+#. module: cr_import_vendor_bills
+#: model:ir.model.fields,help:cr_import_vendor_bills.field_res_company__import_bill_journal_id
+msgid "Vendor Bills Journal"
+msgstr "Diario de facturas de proveedores"
+
+#. module: cr_import_vendor_bills
+#: code:addons/cr_import_vendor_bills/models/account.py:187
+#, python-format
+msgid "Warning!"
+msgstr "¡Atención!"
+
+#. module: cr_import_vendor_bills
+#: code:addons/cr_import_vendor_bills/models/account.py:188
+#, python-format
+msgid "You must first select a partner."
+msgstr "Primero debes elegir una compañía."
+

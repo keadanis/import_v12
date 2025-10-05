@@ -1,0 +1,14 @@
+Bitacora de mejoras
+
+Fecha: 10 junio 2023
+
+- cuando vienen facturas con impuestos otros, el monto de otros se agrega al costo del producto y así calcular el iva y que el costo del producto sea el real, tomando en cuenta el monto de ese impuesto "otros"
+- se corrigió el calculo cuando vienen facturas con descuento
+- se hereda la función del importador al botón "cargar datos del xml"
+- se corrigió que lea facturas con mas de un descuento en la misma línea
+- se corrigió cuando las facturas vienen con "otros cargos" en las líneas de factura, como las del ICE que viene con lo de Bomberos, INS y Cruz Roja
+- Se modificó la precisión decimal para las facturas de proveedor, para que usen 5 decimales al cargarse, ya que esto afectaba el calculo de muchas facturas que traen mas de dos decimales, esto solo se hace en las líneas de facturas y no en los totales
+- se modificó que en las líneas se pueda seleccionar un producto para cada línea sin que se modifique la descripción del producto en la línea, y que cambie la cuenta contable y el impuesto que tiene asignado ese producto que se seleccione
+- se agrega a las lñineas la cuenta configurada en "cuenta de gasto" en el proveedor, si el proveedor no existe, se asigna la cuenta configurada en la sección de compañía al importar
+- se agraga notificación en conversaiones, al actualizar el catálogo cabysm los productos que quedan con cabys invalido
+*************************************************************************************************

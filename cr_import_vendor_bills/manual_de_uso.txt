@@ -1,0 +1,64 @@
+Información sobre la función de importar facturas de proveedor desde un correo electrónico
+
+Configurar la recepción de facturas de proveedor desde el correo
+	En TECNICO, ir a SERVIDORES DE CORREO ENTRANTE, crear y configurar con los siguientes datos:
+	NOMBRE: Recepción de Facturas de Proveedores	TIPO SERVIDOR: (IMAP)
+
+	SERVIDOR Y CONEXION
+	NOMBRE DEL SERVIDOR: host del servicio	NOMBRE DE USUARIO: correo o nombre de usuario
+	PUERTO: Puerto de conexión					CONTRASEÑA: clave
+	SSL/TSL: Marcar si lo requiere
+
+	AVANZADO
+	Se recomienda dejar los valores predeterminados
+	MANTENER ORIGINAL: Seleccionar para mantener el correo en la bandeja de entrada
+	Luego de configurar guardar y hacer click en el botón Probar y confirmar
+	** Ahora es buen momento para ir a la tarea programada y modificar el tiempo de ejecución si es necesario, por defecto es cada 5 minutos **
+
+Activar en la compañía
+	Ir a COMPAÑIA y activar la función en la pestaña de Importación de facturas (Importar facturas de Proveedor)
+	Servidor de correo seleccionar (Recepción de Facturas de Proveedores)
+	En carpeta a importar indicar el nombre de la carpeta de donde se importaran los correos, si no utiliza carpetas colocar "inbox".
+	   En caso de que los correos se encuentren dentro de una sub carpeta que no sea "inbox" indicarla por ej: carpeta/subcarpeta (la que contiene los correos)
+	Diario dejar (Facturas de Proveedor)
+	Producto puede seleccionar un producto interno por defecto si así lo requiere.
+	Cuenta de gasto seleccionar la cuenta contable por defecto que se asignará a las facturas de proveedor.
+	Cuenta analítica seleccionar la cuenta analítica por defecto que se asignará a las facturas de proveedor (opcional)
+	
+	Complete los campos requeridos
+	SERVIDOR DE CORREO: Importar Factura de Proveedor (configurado en el paso anterior)
+	DIARIO: Seleccionar el diario Facturas de proveedor
+	PRODUCTO: Seleccionar el producto por defecto que se asignará a cada línea (OPCIONAL no querido)
+	CUENTA DE GASTOS: Seleccionar la cuenta contable que se asignará a cada línea (OBLIGATORIO, esta cuenta puede cambiarse si es necesario en el asistente de validación)
+	CUENTA ANALITICA: Seleccionar o crear la cuenta analítica que se asignará a cada línea (OPCIONAL, esta cuenta puede cambiarse si es necesario en el asistente de validación)
+
+	
+FUNCIONAMIENTO
+	Se ejecuta la función, lee los correos en la bandeja de entrada y valida la información (unicamente los que estan en estado NO LEIDOS)
+	Al encontrar un archivo XML adjunto, valida en NIF de la compañía.
+		Si el NIF de la compañía coincide, valida en NIF del proveedor.
+			Si el NIF del proveedor existe
+				Carga la información en una factura de proveedor o nota de crédito, dejándola en estado borrador para su posterior validación.
+				
+			Si el NIF del proveedor no existe
+				Crea el proveedor con la información del XML y carga la información en una factura de proveedor o nota de crédito, dejándola en estado borrador para su posterior validación.
+							
+			Todos los mensajes referentes a cada factura de proveedor, se agregan en la sección de mensajes (chatter)
+			Adjunta los archivos (PDF, XML comprobante y XML respuesta)
+			** En caso de encontrar solamente el XML de respuesta, adjunta este archivo a la factura correspondiente **
+			Elimina el correo si se seleccionó dicha opción en la configuración del correo entrante.
+			
+		Si el NIF de la compañía no coincide.
+			Ignora el correo y lo mantiene en la bandeja de entrada o carpeta seleccionada.
+
+	Si no encuentra archivos validos para procesar borra el correo de la bandeja de entrada o la carpeta seleccionada.
+	Cuando la factura de proveedor es creada con este proceso se llenan los campos partner, referencia de proveedor, tipo de comprobante, métodos de pago, moneda, xml del proveedor y fecha de factura, serán campos de tipo (solo lectura) y se marcará la casilla de "Desde email"
+	Cuando este asistente a adjuntado el XML de respuesta se marcara la casilla "Tiene ACK"
+	Al validarse el XML comprobante si la clave numérica ya existe, se ignora el proceso y elimina el correo de la bandeja de entrada o la carpeta seleccionada.
+	Al validarse el XML de respuesta si la casilla "Tiene ACK" ya esta marcada, se ignora el proceso y elimina el correo de la bandeja de entrada o la carpeta seleccionada.
+	
+Recomendaciones
+    *** Importante: Ir a Técnico - Seudónimos y eliminar el de FACTURAS DE PROVEEDOR ***
+	Puede crear un correo exclusivo para este servicio y que se programe el re envío desde las cuentas de correo que reciben las FE de cada cliente y puede crear un solo correo para recibir correos de varias compañías, puede crear una carpeta para cada compañía y para cada compañía se valida el XML, toma el que le corresponde y ejecuta todo el proceso anterior.
+	Puede usar el correo corporativo del cliente o asignarle uno.
+	Se debe dar mantenimiento al correo para eliminar correos basura.

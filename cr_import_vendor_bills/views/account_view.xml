@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="invoice_supplier_form_inherit" model="ir.ui.view">
+            <field name="name">account.invoice.supplier.form.inherit</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="cr_electronic_invoice.invoice_supplier_form_inherit"/>
+            <field name="arch" type="xml">
+                <xpath expr="(//field[@name='vendor_bill_id'])" position="after">
+                    <field name="iva_condition"/>
+                    <field name="company_activity_id"  domain="[('active', '=', True)]" options='{"no_open": True, "no_create": True}' />
+                </xpath>
+                <xpath expr="(//field[@name='user_id'])" position="after">
+                    <field name="from_mail"/>
+                    <field name="has_ack"/>
+                </xpath>
+
+                <xpath expr="(//field[@name='partner_id'])" position="attributes">
+                    <attribute name="widget"/>
+                    <attribute name="attrs">{'readonly': [('from_mail', '=', True)]}</attribute>
+                </xpath>
+
+
+                <xpath expr="(//field[@name='reference'])" position="attributes">
+                    <attribute name="attrs">{'readonly': [('from_mail', '=', True)]}</attribute>
+                </xpath>
+
+                <xpath expr="(//field[@name='tipo_documento'])" position="attributes">
+                    <attribute name="attrs">{'readonly': [('from_mail', '=', True)]}</attribute>
+                </xpath>
+
+                <xpath expr="(//field[@name='payment_methods_id'])" position="attributes">
+                    <attribute name="attrs">{'readonly': [('from_mail', '=', True)]}</attribute>
+                </xpath>
+
+                <xpath expr="(//field[@name='currency_id'])" position="attributes">
+                    <attribute name="attrs">{'readonly': [('from_mail', '=', True)]}</attribute>
+                </xpath>
+            </field>
+    </record>
+</odoo>

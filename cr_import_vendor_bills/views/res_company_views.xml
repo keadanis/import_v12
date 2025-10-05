@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_company_form_import_inherit" model="ir.ui.view">
+            <field name="name">res.company.form.inherit</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[2]" position="after">
+                    <page string="Invoice Import">
+                        <group cols="2">
+                            <group cols="2">
+                                <field name="import_bill_automatic"/>
+                                <field name="import_bill_mail_server_id" attrs="{'invisible':[('import_bill_automatic','=',False)],
+                                               'required': [('import_bill_automatic', '=', True)]}"/>
+                                <field name="import_bill_folder_import" attrs="{'invisible':[('import_bill_automatic','=',False)],
+                                               'required': [('import_bill_automatic', '=', True)]}"/>
+                                <field name="import_bill_journal_id"
+                                       attrs="{'invisible':[('import_bill_automatic','=',False)],
+                                               'required': [('import_bill_automatic', '=', True)]}"/>
+                                <field name="import_bill_product_id" attrs="{'invisible':[('import_bill_automatic','=',False)]}"/>
+                                <field name="import_bill_account_id" attrs="{'invisible':[('import_bill_automatic','=',False)],
+                                               'required': [('import_bill_automatic', '=', True)]}"/>
+                                <field name="import_bill_account_analytic_id" attrs="{'invisible':[('import_bill_automatic','=',False)]}"/>
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="cron_load_xml_invoice_tax_lines" model="ir.cron">
+            <field name="name">Recálculo de Facturas(xml)</field>
+            <field name="model_id" ref="model_account_invoice"/>
+            <field name="type">account.invoice</field>
+            <field name="state">code</field>
+            <field name="code">model.load_xml_invoice_tax_lines(inv_type=['in_invoice', 'in_refund'], from_date='2022-07-01', to_date='2022-07-31')</field>
+            <field name="nextcall" eval="(datetime.today() + timedelta(days=1)).strftime('%Y-%m-%d 00:01:00')"></field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="active" eval="False"/>
+        </record>
+
+        <record forcecreate="True" id="decimal_price_purchase_fe" model="decimal.precision">
+            <field name="name">Compras FE</field>
+            <field name="digits">5</field>
+        </record>
+    </data>
+</odoo>

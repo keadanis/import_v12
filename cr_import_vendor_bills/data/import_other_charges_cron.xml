@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="cron_load__invoice_other_charge" model="ir.cron">
+            <field name="name">Cargar Facturas(xml) Otros Cargos</field>
+            <field name="model_id" ref="model_account_invoice"/>
+            <field name="type">account.invoice</field>
+            <field name="state">code</field>
+            <field name="code">
+#inv_ids=[],inv_type=['in_invoice']
+model.load_invoice_other_charges(inv_ids=[],inv_type=['in_invoice'], from_date='2023-03-01', to_date='2023-03-31')
+            </field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="active" eval="False"/>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,30 @@
+Correo entrante
+	Modificar el tiempo de ejecución de la acción planificada para este servicio
+		Ir a técnico - acciones planificadas - Correo: servicio de Fetchmail y cambiar el ejecutar cada: 2 horas
+
+	En TECNICO, ir a SERVIDORES DE CORREO ENTRANTE, crear y configurar con los siguientes datos:
+	NOMBRE: Recepción de Facturas de Proveedor		TIPO SERVIDOR: IMAP
+
+	SERVIDOR Y CONEXION
+	NOMBRE DEL SERVIDOR: mail-server.com		NOMBRE DE USUARIO: user@domain.com
+	PUERTO: 993					CONTRASEÑA: ******
+	SSL/TSL: Marcar
+
+	AVANZADO
+	Dejar los valores predeterminados
+	MANTENER ORIGINAL: No marcar
+	Probar conexión y guardar
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+Ir a ajustes - compañía
+
+	En la pestaña Importación de facturas
+	Marcar la "Importar Facturas de Proveedores
+		Servidor de correo: seleccionar el creado anteriormente
+		Carpeta de correo: Digitar la carpeta de donde se tomaran los correos ej: inbox o carpeta/sub_carpeta
+		Diario: Facturas de Proveedor (CRC)
+		Producto: Opcional
+		Cuenta de gasto: Seleccionar la cuenta, Ej: 0-113101 0-Inventario producto para la venta
+		Cuenta analítica: Opcional
+	Guardar cambios
